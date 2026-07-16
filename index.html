@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>📡 Infos reçues</title>
+    <style>
+        body { background: #0d1117; color: #c9d1d9; font-family: monospace; padding: 20px; }
+        .info { background: #161b22; padding: 15px; margin: 10px; border-radius: 8px; }
+        .ip { color: #58a6ff; }
+        .date { color: #8b949e; }
+    </style>
+</head>
+<body>
+    <h1>📡 Infos reçues</h1>
+    {% for info in infos %}
+    <div class="info">
+        <div class="ip">🖥️ {{ info.nom_pc }}</div>
+        <div>👤 {{ info.utilisateur }}</div>
+        <div>💻 {{ info.systeme }} {{ info.machine }}</div>
+        <div>🌍 IP: {{ info.ip_visiteur }}</div>
+        <div class="date">📅 {{ info.date }}</div>
+    </div>
+    {% endfor %}
+</body>
+</html>
